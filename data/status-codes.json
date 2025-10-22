@@ -1,0 +1,75 @@
+{
+    "1xx": {
+      "100": {"status_code":100,"category":"1xx","phrase":"Continue","description":"The server has received the request headers, and the client should proceed to send the request body."},
+      "101": {"status_code":101,"category":"1xx","phrase":"Switching Protocols","description":"The requester has asked the server to switch protocols."},
+      "102": {"status_code":102,"category":"1xx","phrase":"Processing","description":"The server has received and is processing the request, but no response is available yet."},
+      "103": {"status_code":103,"category":"1xx","phrase":"Early Hints","description":"Used to return some response headers before final HTTP message."}
+    },
+    "2xx": {
+      "200": {"status_code":200,"category":"2xx","phrase":"OK","description":"The request has succeeded."},
+      "201": {"status_code":201,"category":"2xx","phrase":"Created","description":"The request has been fulfilled and has resulted in a new resource being created."},
+      "202": {"status_code":202,"category":"2xx","phrase":"Accepted","description":"The request has been accepted for processing, but the processing has not been completed."},
+      "203": {"status_code":203,"category":"2xx","phrase":"Non-Authoritative Information","description":"The server successfully processed the request, but is returning information from another source."},
+      "204": {"status_code":204,"category":"2xx","phrase":"No Content","description":"The server successfully processed the request, but is not returning any content."},
+      "205": {"status_code":205,"category":"2xx","phrase":"Reset Content","description":"The server successfully processed the request and requires that the requester reset the document view."},
+      "206": {"status_code":206,"category":"2xx","phrase":"Partial Content","description":"The server is delivering only part of the resource due to a range header sent by the client."},
+      "207": {"status_code":207,"category":"2xx","phrase":"Multi-Status","description":"Conveys information about multiple resources."},
+      "208": {"status_code":208,"category":"2xx","phrase":"Already Reported","description":"Used inside a DAV: propstat response element to avoid duplicate enumeration."},
+      "226": {"status_code":226,"category":"2xx","phrase":"IM Used","description":"The server has fulfilled a GET request for the resource, and the response is a representation of instance manipulations."}
+    },
+    "3xx": {
+      "300": {"status_code":300,"category":"3xx","phrase":"Multiple Choices","description":"Indicates multiple options for the resource that the client may follow."},
+      "301": {"status_code":301,"category":"3xx","phrase":"Moved Permanently","description":"This and all future requests should be directed to the given URI."},
+      "302": {"status_code":302,"category":"3xx","phrase":"Found","description":"The resource was found but resides temporarily under a different URI."},
+      "303": {"status_code":303,"category":"3xx","phrase":"See Other","description":"The response to the request can be found under another URI using GET method."},
+      "304": {"status_code":304,"category":"3xx","phrase":"Not Modified","description":"The resource has not been modified since the last request."},
+      "305": {"status_code":305,"category":"3xx","phrase":"Use Proxy","description":"The requested resource is only available through a proxy."},
+      "307": {"status_code":307,"category":"3xx","phrase":"Temporary Redirect","description":"The requested resource resides temporarily under a different URI."},
+      "308": {"status_code":308,"category":"3xx","phrase":"Permanent Redirect","description":"The request and all future requests should be directed to the given URI."}
+    },
+    "4xx": {
+      "400": {"status_code":400,"category":"4xx","phrase":"Bad Request","description":"The server cannot process the request due to a client error."},
+      "401": {"status_code":401,"category":"4xx","phrase":"Unauthorized","description":"Authentication is required and has failed or has not yet been provided."},
+      "402": {"status_code":402,"category":"4xx","phrase":"Payment Required","description":"Reserved for future use."},
+      "403": {"status_code":403,"category":"4xx","phrase":"Forbidden","description":"The server understands the request but refuses to authorize it."},
+      "404": {"status_code":404,"category":"4xx","phrase":"Not Found","description":"The requested resource could not be found."},
+      "405": {"status_code":405,"category":"4xx","phrase":"Method Not Allowed","description":"A request method is not supported for the requested resource."},
+      "406": {"status_code":406,"category":"4xx","phrase":"Not Acceptable","description":"The requested resource cannot generate content acceptable according to Accept headers."},
+      "407": {"status_code":407,"category":"4xx","phrase":"Proxy Authentication Required","description":"The client must authenticate with the proxy first."},
+      "408": {"status_code":408,"category":"4xx","phrase":"Request Timeout","description":"The server timed out waiting for the request."},
+      "409": {"status_code":409,"category":"4xx","phrase":"Conflict","description":"The request could not be completed due to conflict with the current state of the resource."},
+      "410": {"status_code":410,"category":"4xx","phrase":"Gone","description":"The requested resource is no longer available."},
+      "411": {"status_code":411,"category":"4xx","phrase":"Length Required","description":"The request did not specify the length of its content, which is required."},
+      "412": {"status_code":412,"category":"4xx","phrase":"Precondition Failed","description":"One or more conditions in request header fields evaluated to false."},
+      "413": {"status_code":413,"category":"4xx","phrase":"Payload Too Large","description":"The request is larger than the server is willing to process."},
+      "414": {"status_code":414,"category":"4xx","phrase":"URI Too Long","description":"The URI provided was too long for the server to process."},
+      "415": {"status_code":415,"category":"4xx","phrase":"Unsupported Media Type","description":"The server does not support the media type of the request."},
+      "416": {"status_code":416,"category":"4xx","phrase":"Range Not Satisfiable","description":"The client asked for a portion of the file but the server cannot supply it."},
+      "417": {"status_code":417,"category":"4xx","phrase":"Expectation Failed","description":"The server cannot meet the requirements of the Expect request-header field."},
+      "418": {"status_code":418,"category":"4xx","phrase":"I'm a teapot","description":"Any attempt to instruct a teapot to brew coffee should result in error 418."},
+      "421": {"status_code":421,"category":"4xx","phrase":"Misdirected Request","description":"The request was directed at a server that cannot produce a response."},
+      "422": {"status_code":422,"category":"4xx","phrase":"Unprocessable Entity","description":"The request was well-formed but could not be followed due to semantic errors."},
+      "423": {"status_code":423,"category":"4xx","phrase":"Locked","description":"The resource being accessed is locked."},
+      "424": {"status_code":424,"category":"4xx","phrase":"Failed Dependency","description":"The request failed due to failure of a previous request."},
+      "425": {"status_code":425,"category":"4xx","phrase":"Too Early","description":"Indicates that the server is unwilling to risk processing a request that might be replayed."},
+      "426": {"status_code":426,"category":"4xx","phrase":"Upgrade Required","description":"The client should switch to a different protocol."},
+      "428": {"status_code":428,"category":"4xx","phrase":"Precondition Required","description":"The origin server requires the request to be conditional."},
+      "429": {"status_code":429,"category":"4xx","phrase":"Too Many Requests","description":"The user has sent too many requests in a given amount of time."},
+      "431": {"status_code":431,"category":"4xx","phrase":"Request Header Fields Too Large","description":"The server refuses to process the request because headers are too large."},
+      "451": {"status_code":451,"category":"4xx","phrase":"Unavailable For Legal Reasons","description":"The user agent requested a resource that cannot legally be provided."}
+    },
+    "5xx": {
+      "500": {"status_code":500,"category":"5xx","phrase":"Internal Server Error","description":"A generic error message, given when an unexpected condition was encountered."},
+      "501": {"status_code":501,"category":"5xx","phrase":"Not Implemented","description":"The server does not recognize the request method or cannot fulfill it."},
+      "502": {"status_code":502,"category":"5xx","phrase":"Bad Gateway","description":"The server was acting as a gateway or proxy and received an invalid response."},
+      "503": {"status_code":503,"category":"5xx","phrase":"Service Unavailable","description":"The server is currently unable to handle the request due to overload or maintenance."},
+      "504": {"status_code":504,"category":"5xx","phrase":"Gateway Timeout","description":"The server did not receive a timely response from an upstream server."},
+      "505": {"status_code":505,"category":"5xx","phrase":"HTTP Version Not Supported","description":"The server does not support the HTTP protocol version used."},
+      "506": {"status_code":506,"category":"5xx","phrase":"Variant Also Negotiates","description":"Transparent content negotiation results in a circular reference."},
+      "507": {"status_code":507,"category":"5xx","phrase":"Insufficient Storage","description":"The server cannot store the representation needed to complete the request."},
+      "508": {"status_code":508,"category":"5xx","phrase":"Loop Detected","description":"The server detected an infinite loop while processing the request."},
+      "510": {"status_code":510,"category":"5xx","phrase":"Not Extended","description":"Further extensions to the request are required to fulfill it."},
+      "511": {"status_code":511,"category":"5xx","phrase":"Network Authentication Required","description":"The client needs to authenticate to gain network access."}
+    }
+  }
+  
