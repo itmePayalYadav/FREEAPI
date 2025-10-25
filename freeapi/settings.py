@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
     "rest_framework_simplejwt.token_blacklist", 
+    "channels",
 
     # Local apps
     "accounts",
@@ -69,9 +70,9 @@ AUTH_USER_MODEL = "accounts.User"
 # MIDDLEWARE
 # ----------------------------
 MIDDLEWARE = [
-    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",  
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -135,6 +136,7 @@ SPECTACULAR_SETTINGS = {
 # ----------------------------
 ROOT_URLCONF = "freeapi.urls"
 WSGI_APPLICATION = "freeapi.wsgi.application"
+ASGI_APPLICATION = "freeapi.asgi.application"
 
 # ----------------------------
 # TEMPLATES

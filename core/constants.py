@@ -150,3 +150,15 @@ PAYMENT_STATUS = [
     ("FAILED", "Failed"),
     ("REFUNDED", "Refunded"),
 ]
+
+# ===============================
+# Chat
+# ===============================
+CHAT_TYPES = (
+    ('private', 'Private'),
+    ('group', 'Group'),
+)
+CHAT_ROLE_CHOICES = (
+    ('admin', 'Admin'),
+    ('member', 'Member'),
+)
