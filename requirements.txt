@@ -72,3 +72,9 @@ markdown
 # ----------------------
 stripe
 razorpay
+
+# ----------------------
+# Channel
+# ----------------------
+channels 
+channels_redis

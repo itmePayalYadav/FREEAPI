@@ -21,6 +21,7 @@ urlpatterns = [
     path("api/v1/todo/", include(("todo.urls", "todo"), namespace="todo")),
     path("api/v1/social/", include(("social.urls", "social"), namespace="social")),
     path("api/v1/shop/", include(("shop.urls", "shop"), namespace="shop")),
+    path("api/v1/chat/", include(("chat.urls", "chat"), namespace="chat")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

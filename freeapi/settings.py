@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "accounts",
     "todo",
     "social",
-    "shop"
+    "shop",
+    "chat"
 ]
 
 # ----------------------------
@@ -204,9 +205,6 @@ STRIPE_SECRET_KEY = config("STRIPE_SECRET_KEY")
 RAZORPAY_KEY_ID = config("RAZORPAY_KEY_ID")
 RAZORPAY_KEY_SECRET = config("RAZORPAY_KEY_SECRET")
 
-PAYPAL_CLIENT_ID = config("PAYPAL_CLIENT_ID")
-PAYPAL_CLIENT_SECRET = config("PAYPAL_CLIENT_SECRET")
-
 # ----------------------------
 # DATABASE
 # ----------------------------
@@ -227,6 +225,18 @@ else:
             ssl_require=True,
         )
     }
+
+# ----------------------------
+# CHANNEL
+# ----------------------------
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("redis://localhost:6379/0")],
+        },
+    },
+}
 
 # ----------------------------
 # PASSWORD VALIDATORS
